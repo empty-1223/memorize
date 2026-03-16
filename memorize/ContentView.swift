@@ -9,13 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        
+        HStack //由左往右堆疊
+        {
+            ZStack //由底層往上堆疊
+            {
+            
+            RoundedRectangle(cornerRadius:20) //新增一個大黑色框框
+                .strokeBorder(lineWidth: 3) //框框變空白
+                .foregroundStyle(.orange) //套用顏色
+            Text("🐥") //新增文字
+            
+            }
         }
         .padding()
+        
+    
+    
     }
 }
 
